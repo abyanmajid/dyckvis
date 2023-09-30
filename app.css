@@ -1,0 +1,21 @@
+.container {
+  padding: 2em;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  border: 1.5px solid black;
+}
+
+.diagonal {
+    background: linear-gradient(135deg, transparent 48%, red 48%,  52%, transparent 52%);
+}
+
+.form-group {
+  padding: 1em;
+}
+
+.btn {
+  margin-bottom: 2em;
+}
