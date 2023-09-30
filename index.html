@@ -11,56 +11,37 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="app.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script
+      type="text/javascript"
+      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
   </head>
   <body>
-    <div class="container text-center justify-content-center">
-      <h1>Dyck Paths Visualizer</h1>
-      <form>
-        <div class="form-group">
-          <label for="inputN">Enter an integer for n =</label>
-          <input type="N" id="inputN" placeholder="..." />
-          <small>(n has to be an integer > 0)</small>
+    <div class="container text-center justify-content-center card">
+      <div class="card-header">
+        <h1>Dyck Paths Visualizer</h1>
+      </div>
+      <div class="card-body">
+        <p>A <b>dyck path</b> is a sequence of steps from (0, 0) to ($n$, $n$) that lies strictly below, or touching, the diagonal line.</p>
+        <form>
+          <div class="form-group">
+            <label for="inputN">Enter an integer for $n$ =</label>
+            <input type="N" id="inputN" placeholder="..." />
+            <small>($n$ has to be an integer > 0)</small>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg" id="button">
+            Visualize
+          </button>
+        </form>
+        <p id="catalan">
+          $\displaystyle \LARGE C_n=\frac{1}{n+1}\binom{2n}{n}$
+        </p>
+        <div id="gridSection">
+          <!-- Grid  -->
         </div>
-        <button type="submit" class="btn btn-danger" id="button">
-          Visualize
-        </button>
-      </form>
-      <div id="gridSection">
-        <!-- <div class="row justify-content-center">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div> -->
       </div>
     </div>
 

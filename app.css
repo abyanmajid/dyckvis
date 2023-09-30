@@ -1,5 +1,6 @@
 .container {
-  padding: 2em;
+  margin-top: 2em;
+  width: 75em;
 }
 
 .square {
@@ -9,25 +10,37 @@
 }
 
 .diagonal {
-    background: linear-gradient(135deg, transparent 48%, red 48%,  52%, transparent 52%);
+  background: linear-gradient(
+    135deg,
+    transparent 48%,
+    red 48%,
+    52%,
+    transparent 52%
+  );
 }
 
 .form-group {
   padding: 1em;
 }
 
+.right,
+.up,
+.upRight {
+  transition: border-color 0.5s ease;
+}
+
 .right {
-    border-bottom: 5.5px solid mediumslateblue;
+  border-bottom: 5.5px solid mediumslateblue;
 }
 
 .up {
-    border-left: 5.5px solid mediumseagreen;
+  border-left: 5.5px solid mediumseagreen;
 }
 
 .upRight {
-    border-right: 5.5px solid mediumseagreen;
+  border-right: 5.5px solid mediumseagreen;
 }
 
 .btn {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
