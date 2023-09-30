@@ -16,6 +16,18 @@
   padding: 1em;
 }
 
+.right {
+    border-bottom: 5.5px solid mediumslateblue;
+}
+
+.up {
+    border-left: 5.5px solid mediumseagreen;
+}
+
+.upRight {
+    border-right: 5.5px solid mediumseagreen;
+}
+
 .btn {
   margin-bottom: 2em;
 }

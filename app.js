@@ -6,6 +6,7 @@ let getPathBtn = null;
 
 // ============================ Global variables ============================
 let N = 0;
+let index = 0;
 
 // ============================ Functions ============================
 function createRow(n, diag_sqr) {
@@ -47,18 +48,53 @@ function generateDyckPaths(n) {
     return dyckPaths;
 }
 
-function visualizePath(n, dyckPaths) {
+function visualizePath(dyckPaths) {
     const rows = document.querySelectorAll(".row");
-    const path = dyckPaths[0];
+    const path = dyckPaths[index];
+    console.log(path);
     const coords = [0, 0]
-    for (let i = 0; i < path.length; i++) {
-        if (path[i] === "R") {
 
-        }
-        else if (path[i] === "U") {
-
+    // Delete previous path
+    for (let row of rows) {
+        const squares = row.querySelectorAll(".square");
+        for (const sqr of squares) {
+            sqr.classList.remove("up", "upRight", "right");
         }
     }
+
+    // Draw path
+    let forceLeft = false;
+    let cheat = 0;
+    for (let i = 0; i < path.length; i ++) {
+        const row = rows[rows.length - coords[1] - 1].children;
+        const square = row[coords[0]];
+        if (path[i] === "U") {
+            if (coords[0] === (path.length / 2) - 1 && forceLeft === false && row[cheat] === undefined) {
+                square.classList.add("upRight");
+            } else {
+                square.classList.add("up");
+            }
+            if (path[i + 1] === "R") {
+                forceLeft = false;
+            }
+            coords[1] += 1;
+        }
+        else if (path[i] === "R") {
+            square.classList.add("right");
+            if (coords[0] < (path.length / 2) - 1) {
+                coords[0] += 1;
+            }
+            if (path[i + 1] === "U" && i < (path.length / 2) - 1) {
+                forceLeft = true;
+            }
+            cheat += 1;
+            // else if (path[i + 1] === "U" && ) {
+            //     forceLeft = true;
+            // }
+        } 
+        console.log(coords);
+    }
+    index += 1;
 }
 
 // ============================ Event listeners ============================
@@ -92,7 +128,7 @@ h1.addEventListener("click", (evt) => {
         getPathBtn.addEventListener("click", (evt) => {
             evt.preventDefault();
             const dyckPaths = generateDyckPaths(N);
-            visualizePath(N, dyckPaths);
+            visualizePath(dyckPaths);
         })
     }
 });
