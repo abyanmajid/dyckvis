@@ -4,7 +4,7 @@
 const gridSection = document.querySelector("#gridSection");
 const inputN = document.querySelector("#inputN");
 const h1 = document.querySelector("#button");
-const catalan = document.querySelector("#catalan");
+// const catalan = document.querySelector("#catalan");
 let getPathBtn = null;
 
 // ============================ Global variables ============================
@@ -127,16 +127,16 @@ h1.addEventListener("click", (evt) => {
   }
   const n = Number(inputN.value);
   if (inputN.value === "") {
-    catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
+    // catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
+    // MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
     alert("INVALID: 'n' cannot be empty!");
   } else if (n === 0) {
-    catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
+    // catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
+    // MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
     alert("INVALID: 'n' has to be an integer greater than 0!");
   } else if (Number.isInteger(n) === false) {
-    catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
+    // catalan.innerText = "\\[\\LARGE C_n=\\frac{1}{n + 1}\\binom{2n}{n}\\]";
+    // MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
     alert("INVALID: 'n' has to be an integer!");
   } else {
     console.log(`n = ${inputN.value}`);
@@ -144,8 +144,8 @@ h1.addEventListener("click", (evt) => {
 
     const dyckPaths = generateDyckPaths(n);
 
-    catalan.innerText = `\\[\\LARGE C_n=\\frac{1}{(${n}) + 1}\\binom{2(${n})}{${n}}=${dyckPaths.length}\\]`;
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
+    // catalan.innerText = `\\[\\LARGE C_n=\\frac{1}{(${n}) + 1}\\binom{2(${n})}{${n}}=${dyckPaths.length}\\]`;
+    // MathJax.Hub.Queue(["Typeset", MathJax.Hub, catalan]);
     N = n;
 
     const singularPath = document.createElement("p");

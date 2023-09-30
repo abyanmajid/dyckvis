@@ -11,13 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="app.css" />
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
+    <!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            processEscapes: true
+          },
+          "HTML-CSS": {
+            scale: 100,
+            availableFonts: ["TeX"],
+            linebreaks: { automatic: true }
+          }
+        });
+      </script>      
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    ></script>
+    ></script> -->
   </head>
   <body>
     <div class="container text-center justify-content-center card">
@@ -26,25 +36,25 @@
         <a href="https://github.com/abyanmajid/dyckvis">See Source on GitHub</i></a>
       </div>
       <div class="card-body">
-        <p>A <b>dyck path</b> is a sequence of steps from (0, 0) to ($n$, $n$) that lies strictly below, or touching, the diagonal line.</p>
+        <p>A <b>dyck path</b> is a sequence of steps from (0, 0) to (<i>n</i>, <i>n</i>) that lies strictly below, or touching, the diagonal line.</p>
         <p class="alert alert-warning">
             <b>DISCLAIMER:</b> <br>
-            The greater the value of $n$, the longer it will take to load the visualizer! <br>
-            <i>The web app may crash if $n$ is too large!</i>
+            The greater the value of <i>"n"</i>, the longer it will take to load the visualizer! <br>
+            <i>The web app may crash if <i>"n"</i> is too large!</i>
         </p>
         <form>
           <div class="form-group">
-            <label for="inputN">Enter an integer for $n$ =</label>
+            <label for="inputN">Enter an integer for <i>n</i> =</label>
             <input type="N" id="inputN" placeholder="..." />
-            <small>($n$ has to be an integer > 0)</small>
+            <small>(<i>n</i> has to be an integer > 0)</small>
           </div>
           <a type="submit" class="btn btn-danger btn-lg" id="button">
             Visualize
           </a>
         </form>
-        <p id="catalan">
+        <!-- <p id="catalan">
           $\displaystyle \LARGE C_n=\frac{1}{n+1}\binom{2n}{n}$
-        </p>
+        </p> -->
         <div id="gridSection">
           <!-- Grid  -->
         </div>
