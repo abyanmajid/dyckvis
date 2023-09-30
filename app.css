@@ -30,15 +30,15 @@
 }
 
 .right {
-  border-bottom: 5.5px solid mediumslateblue;
+  border-bottom: 5.5px solid mediumspringgreen;
 }
 
 .up {
-  border-left: 5.5px solid mediumseagreen;
+  border-left: 5.5px solid magenta;
 }
 
 .upRight {
-  border-right: 5.5px solid mediumseagreen;
+  border-right: 5.5px solid magenta;
 }
 
 .btn {

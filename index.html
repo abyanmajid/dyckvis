@@ -23,18 +23,24 @@
     <div class="container text-center justify-content-center card">
       <div class="card-header">
         <h1>Dyck Paths Visualizer</h1>
+        <a href="https://github.com/abyanmajid/dyckvis">See Source on GitHub</i></a>
       </div>
       <div class="card-body">
         <p>A <b>dyck path</b> is a sequence of steps from (0, 0) to ($n$, $n$) that lies strictly below, or touching, the diagonal line.</p>
+        <p class="alert alert-warning">
+            <b>DISCLAIMER:</b> <br>
+            The greater the value of $n$, the longer it will take to load the visualizer! <br>
+            <i>The web app may crash if $n$ is too large!</i>
+        </p>
         <form>
           <div class="form-group">
             <label for="inputN">Enter an integer for $n$ =</label>
             <input type="N" id="inputN" placeholder="..." />
             <small>($n$ has to be an integer > 0)</small>
           </div>
-          <button type="submit" class="btn btn-danger btn-lg" id="button">
+          <a type="submit" class="btn btn-danger btn-lg" id="button">
             Visualize
-          </button>
+          </a>
         </form>
         <p id="catalan">
           $\displaystyle \LARGE C_n=\frac{1}{n+1}\binom{2n}{n}$
